@@ -1,0 +1,34 @@
+<div class="container">
+<h2>Login List</h2>
+<p>Use the buttons provided to perform crud operations</p>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Login ID</th>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Email Address</th>
+    <th scope="col">Password</th>
+    <th scope="col">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngIf="logins.length ==0">
+    <td colspan="6" style="text-align: center"><h2>There are no logins yet</h2></td>
+  </tr>
+  <tr *ngFor="let login of logins">
+    <th >{{login.id}}</th>
+    <td>{{login.firstname}}</td>
+    <td>{{login.lastname}}</td>
+    <td>{{login.email}}</td>
+    <td>{{login.password}}</td>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="goToUpdateLogin(login.id)">Edit</button>&nbsp;
+      <button type="button" class="btn btn-view" (click)="goToViewLogin(login.id)">View</button>&nbsp;
+      <button type="button" class="btn btn-danger" (click)="deleteLogin(login.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+  <button type="button" class="btn btn-success" (click)="goToAddLogin()">Add</button>
+</div>

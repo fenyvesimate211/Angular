@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Login Table</h2>
+  <p>Use the buttons provided to perform crud operations</p>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Login ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th >{{login.id}}</th>
+      <td>{{login.firstname}}</td>
+      <td>{{login.lastname}}</td>
+      <td>{{login.email}}</td>
+      <td>{{login.password}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-secondary" (click)="gotolist()">Back</button>
+</div>
